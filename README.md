@@ -21,7 +21,7 @@ I have a directory for external data in docker.
 It contains  
 - an IRIS.DAT  (with my code and my globals)  
 - an adapted iris.cpf  
-- - refers to my IRIS.DAT as Database, mout required at startup  
+- - refers to my IRIS.DAT as Database, mount required at startup  
 - - replaces the DB for namespace USER to the new DB  
 - - maps routine ^%ZSTART also to the new DB  
 - - - ^%ZSTART cleans the property for PasswordChange for some accounts  
