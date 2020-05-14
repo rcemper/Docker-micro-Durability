@@ -51,7 +51,7 @@ run your container:
 
 docker run --name iris1 --init -it \  
 -p 52773:52773 -p 51773:51773 \  
--v $(pwd)/demo:/external \  
---rm \ 
-intersystems/iris-community:2020.2.0.199.0 \ 
--b /external/pre.copy  
+-v __$(pwd)/demo:/external__ \  
+--rm \   
+__intersystems/iris-community:2020.2.0.199.0__ \   
+-b __/external/pre.copy__  
