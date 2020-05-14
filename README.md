@@ -27,6 +27,8 @@ It contains
 - - - ^%ZSTART cleans the property for PasswordChange for some accounts  
 - a script to copy iris.cpf into my container  
 
+
+__NOTICE: ALL SCRIPTS ARE FOR LINUX ONLY !__
 Once the script is executed  
 - IRIS starts  
 - ^%ZSTART is executed  
