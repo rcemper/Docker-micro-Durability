@@ -34,7 +34,7 @@ and I'm ready to work.
 
 Important:  
 The external directory should allow *rwx* access (chmod 777) as the docker image  
-is just a nobody to your local system. But it wants to write his IRIS.lck file  
+is just a nobody to your local system. But it wants to write his iris.lck file  
 
 Shutdown requires no action as your DB is already outside the docker image located   
 and next time you have a virgin IRIS __system__ again with your USER DB unchanged.  
