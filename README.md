@@ -45,7 +45,7 @@ And a got rid of the boring acts with virgin container images.
 
 How to use:  
 Have a docker instance for IRIS >>>  iris-community:2020.2.0.199.0      
-Download and untar the archiv rcc-demoJS.tar.gz  
+Download and untar the archiv __micro-durability.tar.gz__    
 chmod 777 to direcory demo/  
 run your container:  
 
