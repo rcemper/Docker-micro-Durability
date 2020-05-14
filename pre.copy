@@ -1,0 +1,2 @@
+cp -fu /external/iris.cpf /usr/irissys/iris.cpf   
+rm -f /external/iris.lck   
