@@ -1,2 +1,44 @@
-# IRIS-Docker-micro-Durability-
+# IRIS-Docker-micro-Durability
 allow small durability for demo and developent
+
+During development of a container based demo I found the need to access a fresh docker   
+instance of IRIS image (e.g intersystems/iris-community:2020.2.0.199.0) over and over.   
+To bypass setting passwords and loading my code repeatedly I developed this workaround.
+
+It is a reduced variant of  "Docker - light weight durability"
+https://community.intersystems.com/post/docker-light-weight-durability
+
+I want   
+- passwords without need to change  
+- my classes, routines, globals  without repeated reload  
+
+The base facts:  
+- docker offers external volumes  (eg. needed for the license) 
+- iris-main allows to run scripts before IRIS starts  
+
+OK so far! 
+I have a directory for external data in docker.  
+It contains  
+- an IRIS.DAT  (with my code and my globals)  
+- an adapted iris.cpf  
+- - refers to my IRIS.DAT as Database, mout required at startup  
+- - replaces the DB for namespace USER to the new DB  
+- - maps routine ^%ZSTART also to the new DB  
+- - - ^%ZSTART cleans the property for PasswordChange for some accounts  
+- a script to copy iris.cpf into my container  
+
+Once the script is executed  
+- IRIS starts  
+- ^%ZSTART is executed  
+and I'm ready to work.  
+
+Important:  
+The external directory should allow *rwx* access (chmod 777) as the docker image  
+is just a nobody to your local system. But it wants to write his IRIS.lck file  
+
+Shutdown requires no action as you DB is already outside the docker image located   
+and next time you have a virgin IRIS system again.  
+
+You may say: It's dirty.  
+But I can confirm my development speed and fun was significantly increasing.   
+And a got rid of the boring acts with virgin container images.  
