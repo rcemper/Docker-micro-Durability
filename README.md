@@ -27,8 +27,6 @@ It contains
 - - - ^%ZSTART cleans the property for PasswordChange for some accounts  
 - a script to copy iris.cpf into my container  
 
-
-__NOTICE: ALL SCRIPTS ARE FOR LINUX ONLY !__
 Once the script is executed  
 - IRIS starts  
 - ^%ZSTART is executed  
@@ -57,3 +55,9 @@ docker run --name iris1 --init -it \
 --rm \   
 __intersystems/iris-community:2020.2.0.199.0__ \   
 -b __/external/pre.copy__  
+
+
+_Late warning. always check the version of your image!   
+I just fell into  intersystems/iris-community:2020.2.0.__204__.0_
+
+__NOTICE: ALL SCRIPTS ARE FOR LINUX ONLY !__
