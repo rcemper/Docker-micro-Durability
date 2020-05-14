@@ -5,7 +5,7 @@ During development of a container based demo I found the need to access a fresh 
 instance of IRIS image (e.g intersystems/iris-community:2020.2.0.199.0) over and over.   
 To bypass setting passwords and loading my code repeatedly I developed this workaround.
 
-It is a reduced variant of  "Docker - light weight durability"
+It is a reduced variant of  "Docker - light weight durability"   
 https://community.intersystems.com/post/docker-light-weight-durability
 
 I want   
@@ -36,9 +36,22 @@ Important:
 The external directory should allow *rwx* access (chmod 777) as the docker image  
 is just a nobody to your local system. But it wants to write his IRIS.lck file  
 
-Shutdown requires no action as you DB is already outside the docker image located   
-and next time you have a virgin IRIS system again.  
+Shutdown requires no action as your DB is already outside the docker image located   
+and next time you have a virgin IRIS __system__ again with your USER DB unchanged.  
 
 You may say: It's dirty.  
 But I can confirm my development speed and fun was significantly increasing.   
-And a got rid of the boring acts with virgin container images.  
+And a got rid of the boring acts with virgin container images. 
+
+How to use:  
+Have a docker instance for IRIS >>>  iris-community:2020.2.0.199.0      
+Download and untar the archiv rcc-demoJS.tar.gz  
+chmod 777 to direcory demo/  
+run your container:  
+
+docker run --name iris1 --init -it \  
+-p 52773:52773 -p 51773:51773 \  
+-v $(pwd)/demo:/external \  
+--rm \ 
+intersystems/iris-community:2020.2.0.199.0 \ 
+-b /external/pre.copy  
