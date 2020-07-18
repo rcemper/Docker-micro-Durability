@@ -1,6 +1,12 @@
 # IRIS-Docker-micro-Durability
 allow small durability for demo and developent
 
+  ~~~
+ This is a coding example working on IRIS 2020.2  
+ It will not be kept in sync with new versions      
+ It is also NOT serviced by InterSystems Support !   
+  ~~~
+  
 During development of a container based demo I found the need to access a fresh docker   
 instance of IRIS image (e.g intersystems/iris-community:2020.2.0.199.0) over and over.   
 To bypass setting passwords and loading my code repeatedly I developed this workaround.
