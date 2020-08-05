@@ -11,8 +11,7 @@ During development of a container based demo I found the need to access a fresh 
 instance of IRIS image (e.g intersystems/iris-community:2020.2.0.199.0) over and over.   
 To bypass setting passwords and loading my code repeatedly I developed this workaround.
 
-It is a reduced variant of  [Docker - light weight durability]
-(https://community.intersystems.com/post/docker-light-weight-durability)
+It is a reduced variant of [Docker - light weight durability](https://community.intersystems.com/post/docker-light-weight-durability)
 
 I want   
 - passwords without need to change  
