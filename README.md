@@ -19,7 +19,7 @@ Clone/git pull the repo into any local directory
 ```
 Open the terminal in this directory build and run the container:   
 ```
-$ docker-compose up -d   
+  docker-compose up -d   
 ```
 ### How to use it
 Your container has now an external IRIS.DAT in \</installdir\>/demo/   
