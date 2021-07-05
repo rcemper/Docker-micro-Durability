@@ -1,0 +1,13 @@
+zn "%SYS"
+Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+set nsp="USER"
+set db="EXTERNALDEMO"
+set d("Directory")="/external/demo/"
+set sc=##Class(Config.Databases).Create(db,.d)
+set sc=##Class(Config.Namespaces).Get(nsp,.n)
+set n("Globals")=db
+set n("Routines")=db
+set sc=##Class(Config.Namespaces).Modify(nsp,.n)
+
+halt
