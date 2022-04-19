@@ -24,7 +24,7 @@ Open the terminal in this directory build and run the container:
 ### How to use it
 Your container has now an external IRIS.DAT in \</installdir\>/demo/   
 It is setup as working DB for Globals and Routines in namespace USER  
-*REMEBER: this is just for the content of this namespace*    
+*REMEMBER: this is just for the content of this namespace*    
 
 [Article to previous version in DC](https://community.intersystems.com/post/iris-docker-micro-durability)    
 
