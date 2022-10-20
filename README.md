@@ -15,7 +15,7 @@ Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installi
 ### Installation   
 Clone/git pull the repo into any local directory  
 ```
-  git clone https://github.com/rcemper/SSH-for-IRIS-container.git   
+  git clone https://github.com/isc-at/IRIS-Docker-micro-Durability  
 ```
 Open the terminal in this directory build and run the container:   
 ```
