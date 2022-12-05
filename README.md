@@ -27,8 +27,3 @@ It is setup as working DB for Globals and Routines in namespace USER
 *REMEMBER: this is just for the content of this namespace*    
 
 [Article to previous version in DC](https://community.intersystems.com/post/iris-docker-micro-durability)    
-
-[Demo Server SMP](https://iris-docker-micro-durabiity.demo.community.intersystems.com/csp/sys/UtilHome.csp)   
-    
-**Code Quality**  
-<img width="85%" src="https://openexchange.intersystems.com/mp/img/packages/822/screenshots/oam2st9hh4spkkbohpggihfs.jpg">
